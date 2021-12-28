@@ -1,7 +1,7 @@
 module time_divider_tb (
 );
-    reg i_CLK;
-    reg i_RST;
+    reg i_CLK; //input clock signal
+    reg i_RST; //rest signal->enables when high
     wire o_CLK;
     time_divider #(10) divider (.i_CLK(i_CLK),.i_RST(i_RST),.o_CLK(o_CLK));
     initial begin   

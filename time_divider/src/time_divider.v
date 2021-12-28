@@ -1,9 +1,9 @@
 module time_divider 
-#(parameter ratio=4)
+#(parameter ratio=4) //分频比
 (
-    input i_CLK,
-    input i_RST,
-    output reg o_CLK
+    input i_CLK, //输入时钟信号
+    input i_RST, //同步重置信号高电平有效
+    output reg o_CLK //输出时钟信号
 );
     integer c;
     integer target=ratio/2;

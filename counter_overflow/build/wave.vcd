@@ -1,0 +1,170 @@
+$date
+	Tue Dec 28 09:57:26 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module counter_overflow_tb $end
+$var wire 1 ! o_OVERFLOW $end
+$var reg 1 " i_CLK $end
+$var reg 32 # i_LIM [31:0] $end
+$var reg 1 $ i_RST $end
+$var integer 32 % i [31:0] $end
+$scope module cnt $end
+$var wire 1 " i_CLK $end
+$var wire 32 & i_LIM [31:0] $end
+$var wire 1 $ i_RST $end
+$var reg 32 ' c [31:0] $end
+$var reg 1 ! o_OVERFLOW $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 '
+b101 &
+b0 %
+0$
+b101 #
+0"
+0!
+$end
+#5
+b1 '
+b1 %
+1"
+#10
+b10 %
+0"
+#15
+b10 '
+b11 %
+1"
+#20
+b100 %
+0"
+#25
+b11 '
+b101 %
+1"
+#30
+b110 %
+0"
+#35
+b100 '
+b111 %
+1"
+#40
+b1000 %
+0"
+#45
+1!
+b101 '
+b1001 %
+1"
+#50
+b1010 %
+0"
+#55
+bz '
+b1011 %
+1"
+#60
+b1100 %
+0"
+#65
+b1101 %
+1"
+#70
+b1110 %
+0"
+#75
+0!
+b0 '
+1$
+b1111 %
+1"
+#80
+b0 %
+0$
+#85
+b1 %
+0"
+#90
+b1 '
+b10 %
+1"
+#95
+b11 %
+0"
+#100
+b10 '
+b100 %
+1"
+#105
+b101 %
+0"
+#110
+b0 '
+1$
+b110 %
+1"
+#115
+b0 %
+0$
+#120
+b1 %
+0"
+#125
+b1 '
+b10 %
+1"
+#130
+b11 %
+0"
+#135
+b10 '
+b100 %
+1"
+#140
+b101 %
+0"
+#145
+b11 '
+b110 %
+1"
+#150
+b111 %
+0"
+#155
+b100 '
+b1000 %
+1"
+#160
+b1001 %
+0"
+#165
+1!
+b101 '
+b1010 %
+1"
+#170
+b1011 %
+0"
+#175
+bz '
+b1100 %
+1"
+#180
+b1101 %
+0"
+#185
+b1110 %
+1"
+#190
+b1111 %
+0"
+#10000
