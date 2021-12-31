@@ -12,23 +12,25 @@ module counter_overflow
         c<=0; //clear
         o_OVERFLOW<=0;
     end
-    //异步复位
-    always @(posedge i_RST) begin
-        c<=0;
-        o_OVERFLOW<=0;
-    end
-    always @(posedge i_CLK) begin
-        if(o_OVERFLOW==0) begin
-            c=c+1;
-            if(c>i_LIM) begin
-                o_OVERFLOW<=1;
-            end
-            else begin
-                o_OVERFLOW<=0;
-            end
+    always @(posedge i_CLK or posedge i_RST) begin
+        //异步复位
+        if(i_RST == 1) begin
+            c<=0;
+            o_OVERFLOW<=0;
         end
         else begin
-            c<={COUNTER_BITS{1'bz}};
+            if(o_OVERFLOW==0) begin
+                c=c+1;
+                if(c>i_LIM) begin
+                    o_OVERFLOW<=1;
+                end
+                else begin
+                    o_OVERFLOW<=0;
+                end
+            end
+            else begin
+                c<={COUNTER_BITS{1'bz}};
+            end
         end
     end
 endmodule

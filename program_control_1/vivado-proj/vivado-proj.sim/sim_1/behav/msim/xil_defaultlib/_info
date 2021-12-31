@@ -1,0 +1,110 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.sim/sim_1/behav
+vcounter_overflow
+Z1 !s110 1640924990
+!i10b 1
+!s100 7>n?X3KI>I_D<2PlPF_j70
+ITbF58RJZ;oADgl9`PWN^e1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1640874428
+8../../../../src/counter_overflow.v
+F../../../../src/counter_overflow.v
+L0 2
+Z3 OP;L;10.4c;61
+r1
+!s85 0
+31
+Z4 !s108 1640924990.000000
+Z5 !s107 ../../../../src/program_control_1_tb.v|../../../../src/program_control_1.v|../../../../src/time_divider.v|../../../../src/counter_overflow.v|
+Z6 !s90 -64|-incr|-work|xil_defaultlib|../../../../src/counter_overflow.v|../../../../src/time_divider.v|../../../../src/program_control_1.v|../../../../src/program_control_1_tb.v|
+!i113 1
+Z7 o-work xil_defaultlib -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vglbl
+R1
+!i10b 1
+!s100 g=dL3UKAkhNRkQ:7=fPzF1
+IkJ@CGO[n5[_3E=ZkTzmEk2
+R2
+R0
+w1464879896
+8glbl.v
+Fglbl.v
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+!s107 glbl.v|
+!s90 -work|xil_defaultlib|glbl.v|
+!i113 1
+R7
+vprogram_control_1
+R1
+!i10b 1
+!s100 <jL8QHLEBmP;12;_i6FaJ3
+IWjo4:N0TAKC4DkPj^kQVH3
+R2
+R0
+w1640924695
+8../../../../src/program_control_1.v
+F../../../../src/program_control_1.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vprogram_control_1_tb
+R1
+!i10b 1
+!s100 GY37Rz_1@PNJHW4lXeZa@1
+IKcIleizR_DUWz8JROY=W<3
+R2
+R0
+w1640877775
+8../../../../src/program_control_1_tb.v
+F../../../../src/program_control_1_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vtime_divider
+R1
+!i10b 1
+!s100 R^SRVUSb`dhmJEnDdhM>M3
+IAlZ^mObCH7^I5PZkPD3D43
+R2
+R0
+w1640924807
+8../../../../src/time_divider.v
+F../../../../src/time_divider.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7

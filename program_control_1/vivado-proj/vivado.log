@@ -1,0 +1,248 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Dec 31 12:05:17 2021
+# Process ID: 11816
+# Current directory: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9816 D:\wza\vivado_program_files\project_for_digital_logic\program_control_1\vivado-proj\vivado-proj.xpr
+# Log file: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado.log
+# Journal file: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/vivado/Vivado/2016.2/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 766.063 ; gain = 132.125
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'program_control_1_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.sim/sim_1/behav'
+"xvlog -m64 --relax -prj program_control_1_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/counter_overflow.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter_overflow
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/time_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module time_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/program_control_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_control_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/program_control_1_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_control_1_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.sim/sim_1/behav'
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: F:/vivado/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto c1ce403156014630bbc868f96409fd62 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot program_control_1_tb_behav xil_defaultlib.program_control_1_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/program_control_1.v" Line 2. Module program_control_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/counter_overflow.v" Line 2. Module counter_overflow doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/time_divider.v" Line 1. Module time_divider doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/program_control_1.v" Line 2. Module program_control_1 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/counter_overflow.v" Line 2. Module counter_overflow doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/time_divider.v" Line 1. Module time_divider doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.counter_overflow
+Compiling module xil_defaultlib.time_divider
+Compiling module xil_defaultlib.program_control_1
+Compiling module xil_defaultlib.program_control_1_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot program_control_1_tb_behav
+
+****** Webtalk v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.sim/sim_1/behav/xsim.dir/program_control_1_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Dec 31 12:20:14 2021...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 781.668 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "program_control_1_tb_behav -key {Behavioral:sim_1:Functional:program_control_1_tb} -tclbatch {program_control_1_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2016.2
+Time resolution is 1 ps
+source program_control_1_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'program_control_1_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:18 . Memory (MB): peak = 784.574 ; gain = 2.906
+set_property target_simulator ModelSim [current_project]
+set_property compxlib.modelsim_compiled_library_dir D:/xilinx_sim_lib [current_project]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -install_path F:/modeltech_pe_10.4c/win32pe
+WARNING: [Vivado 12-3661] Failed to remove file:D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.sim/sim_1/behav/xelab.pb
+INFO: [USF-ModelSim-47] Finding simulator installation...
+INFO: [USF-ModelSim-50] Using simulator executables from 'F:/modeltech_pe_10.4c/win32pe/vsim.exe'
+INFO: [USF-ModelSim-30] Simulation object is 'sim_1'...
+INFO: [USF-modelsim-7] Finding pre-compiled libraries...
+INFO: [USF-modelsim-11] File 'D:/xilinx_sim_lib/modelsim.ini' copied to run dir:'D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.sim/sim_1/behav'
+INFO: [USF-ModelSim-40] Inspecting design source files for 'program_control_1_tb' in fileset 'sim_1'...
+INFO: [USF-ModelSim-107] Finding global include files...
+INFO: [USF-ModelSim-108] Finding include directories and verilog header directory paths...
+INFO: [USF-ModelSim-109] Fetching design files from 'sim_1'...
+INFO: [USF-ModelSim-2] ModelSim::Compile design
+INFO: [USF-ModelSim-15] Creating automatic 'do' files...
+INFO: [USF-ModelSim-69] Executing 'COMPILE and ANALYZE' step in 'D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.sim/sim_1/behav'
+Reading F:/modeltech_pe_10.4c/tcl/vsim/pref.tcl
+
+# 10.4c
+
+# do {program_control_1_tb_compile.do}
+# Model Technology ModelSim PE vmap 10.4c Lib Mapping Utility 2015.07 Jul 20 2015
+# vmap xil_defaultlib msim/xil_defaultlib 
+# Modifying modelsim.ini
+# ** Warning: (vlog-159) Mode option -64 is not supported in this context and will be ignored.
+# 
+# Model Technology ModelSim PE vlog 10.4c Compiler 2015.07 Jul 20 2015
+# Start time: 12:29:50 on Dec 31,2021
+# vlog -64 -incr -work xil_defaultlib ../../../../src/counter_overflow.v ../../../../src/time_divider.v ../../../../src/program_control_1.v ../../../../src/program_control_1_tb.v 
+# -- Compiling module counter_overflow
+# -- Compiling module time_divider
+# -- Compiling module program_control_1
+# -- Compiling module program_control_1_tb
+# 
+# Top level modules:
+# 	program_control_1_tb
+# End time: 12:29:50 on Dec 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim PE vlog 10.4c Compiler 2015.07 Jul 20 2015
+# Start time: 12:29:50 on Dec 31,2021
+# vlog -work xil_defaultlib glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 12:29:50 on Dec 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:17 . Memory (MB): peak = 815.098 ; gain = 0.000
+INFO: [USF-ModelSim-69] 'compile' step finished in '17' seconds
+INFO: [USF-ModelSim-4] ModelSim::Simulate design
+INFO: [USF-ModelSim-69] Executing 'SIMULATE' step in 'D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.sim/sim_1/behav'
+Program launched (PID=4444)
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 815.098 ; gain = 0.000
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Fri Dec 31 14:23:31 2021] Launched synth_1...
+Run output will be captured here: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/synth_1/runme.log
+[Fri Dec 31 14:23:31 2021] Launched impl_1...
+Run output will be captured here: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/impl_1/runme.log
+open_hw
+connect_hw_server -url localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2016.2
+  **** Build date : Jun  2 2016-16:57:03
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 857.914 ; gain = 0.000
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210292708836A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210292708836A]
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292708836A
+set_property PROGRAM.FILE {D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/impl_1/program_control_1.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/impl_1/program_control_1.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Fri Dec 31 14:40:30 2021] Launched synth_1...
+Run output will be captured here: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/synth_1/runme.log
+[Fri Dec 31 14:40:30 2021] Launched impl_1...
+Run output will be captured here: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/impl_1/program_control_1.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Fri Dec 31 14:45:57 2021] Launched synth_1...
+Run output will be captured here: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/synth_1/runme.log
+[Fri Dec 31 14:45:57 2021] Launched impl_1...
+Run output will be captured here: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/impl_1/program_control_1.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Fri Dec 31 15:04:25 2021] Launched synth_1...
+Run output will be captured here: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/synth_1/runme.log
+[Fri Dec 31 15:04:25 2021] Launched impl_1...
+Run output will be captured here: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/impl_1/runme.log
+close_hw
+set_property top program_control_1 [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Fri Dec 31 15:08:58 2021] Launched synth_1...
+Run output will be captured here: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/synth_1/runme.log
+[Fri Dec 31 15:08:58 2021] Launched impl_1...
+Run output will be captured here: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Fri Dec 31 15:09:29 2021] Launched synth_1...
+Run output will be captured here: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/synth_1/runme.log
+[Fri Dec 31 15:09:29 2021] Launched impl_1...
+Run output will be captured here: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/impl_1/runme.log

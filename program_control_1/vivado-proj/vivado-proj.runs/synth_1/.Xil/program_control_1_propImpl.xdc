@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.srcs/constrs_1/new/program_control_1.xdc rfile:../../../vivado-proj.srcs/constrs_1/new/program_control_1.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN E3 [get_ports i_CLK]
+set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN J15 [get_ports i_RST]
+set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN H17 [get_ports o_CTR]

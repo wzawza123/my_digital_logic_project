@@ -1,0 +1,27 @@
+# do {program_control_1_tb_compile.do}
+# Model Technology ModelSim PE vmap 10.4c Lib Mapping Utility 2015.07 Jul 20 2015
+# vmap xil_defaultlib msim/xil_defaultlib 
+# Modifying modelsim.ini
+# ** Warning: (vlog-159) Mode option -64 is not supported in this context and will be ignored.
+# 
+# Model Technology ModelSim PE vlog 10.4c Compiler 2015.07 Jul 20 2015
+# Start time: 12:29:50 on Dec 31,2021
+# vlog -64 -incr -work xil_defaultlib ../../../../src/counter_overflow.v ../../../../src/time_divider.v ../../../../src/program_control_1.v ../../../../src/program_control_1_tb.v 
+# -- Compiling module counter_overflow
+# -- Compiling module time_divider
+# -- Compiling module program_control_1
+# -- Compiling module program_control_1_tb
+# 
+# Top level modules:
+# 	program_control_1_tb
+# End time: 12:29:50 on Dec 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Model Technology ModelSim PE vlog 10.4c Compiler 2015.07 Jul 20 2015
+# Start time: 12:29:50 on Dec 31,2021
+# vlog -work xil_defaultlib glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 12:29:50 on Dec 31,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
