@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../../src/time_divider.v"
+verilog xil_defaultlib  "../../../../src/counter_overflow.v"
+verilog xil_defaultlib  "../../../../src/program_control_1.v"
+verilog xil_defaultlib  "../../../../src/program_control_1_tb.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

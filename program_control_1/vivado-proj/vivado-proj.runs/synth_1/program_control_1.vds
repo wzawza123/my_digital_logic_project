@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Fri Dec 31 15:09:34 2021
-# Process ID: 17520
+# Start of session at: Fri Dec 31 17:48:45 2021
+# Process ID: 2204
 # Current directory: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/synth_1
 # Command line: vivado.exe -log program_control_1.vds -mode batch -messageDb vivado.pb -notrace -source program_control_1.tcl
 # Log file: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/synth_1/program_control_1.vds
@@ -15,26 +15,26 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17748 
+INFO: Helper process launched with PID 18308 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 304.406 ; gain = 97.316
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 304.590 ; gain = 97.398
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'program_control_1' [D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/program_control_1.v:2]
 	Parameter state_rst bound to: 2'b00 
 	Parameter state_wait bound to: 2'b01 
 	Parameter state_change bound to: 2'b10 
-	Parameter delay_time bound to: 2 - type: integer 
+	Parameter delay_time bound to: 1000 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'counter_overflow' [D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/counter_overflow.v:2]
 	Parameter COUNTER_BITS bound to: 32 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'counter_overflow' (1#1) [D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/counter_overflow.v:2]
 INFO: [Synth 8-638] synthesizing module 'time_divider' [D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/time_divider.v:1]
-	Parameter ratio bound to: 100000000 - type: integer 
+	Parameter ratio bound to: 10000000 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'time_divider' (2#1) [D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/time_divider.v:1]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/program_control_1.v:88]
 WARNING: [Synth 8-567] referenced signal 'o_CTR' should be on the sensitivity list [D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/program_control_1.v:82]
 INFO: [Synth 8-256] done synthesizing module 'program_control_1' (3#1) [D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/program_control_1.v:2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 341.813 ; gain = 134.723
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 341.125 ; gain = 133.934
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -44,7 +44,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 341.813 ; gain = 134.723
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 341.125 ; gain = 133.934
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -60,29 +60,29 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 640.137 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 639.594 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:29 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:29 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:29 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "c" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "counter_reset0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "o_CTR" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 WARNING: [Synth 8-327] inferring latch for variable 'o_CTR_reg' [D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/program_control_1.v:85]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:29 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -97,13 +97,12 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 6     
 	   4 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -124,10 +123,8 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
 +---Registers : 
+	               32 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 Module time_divider 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -149,15 +146,15 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:29 . Memory (MB): peak = 640.137 ; gain = 433.047
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "inst/c" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:29 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:29 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Parallel Reinference  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 639.594 ; gain = 432.402
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -167,76 +164,44 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[31]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[30]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[29]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[28]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[27]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[26]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[25]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[24]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[23]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[22]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[21]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[20]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[19]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[18]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[17]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[16]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[15]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[14]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[13]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[12]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[11]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[10]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[9]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[8]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[7]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[6]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[5]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[4]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[3]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[2]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[1]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (counter/c_retimed_reg[0]) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_0) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_1) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_2) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_3) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_4) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_5) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_6) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_7) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_8) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_9) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_10) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_11) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_12) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_13) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_14) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_15) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_16) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_17) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_18) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_19) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_20) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_21) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_22) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_23) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_24) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_25) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_26) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_27) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_28) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_29) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_30) is unused and will be removed from module program_control_1.
-WARNING: [Synth 8-3332] Sequential element (c_reg__0i_31) is unused and will be removed from module program_control_1.
 WARNING: [Synth 8-3332] Sequential element (counter_reset_reg) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[31]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[30]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[29]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[28]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[27]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[26]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[25]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[24]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[23]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[22]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[21]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[20]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[19]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[18]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[17]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[16]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[15]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[14]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[13]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[12]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[11]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[10]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[9]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[8]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[7]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[6]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[5]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[4]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[3]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[2]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[1]) is unused and will be removed from module program_control_1.
+WARNING: [Synth 8-3332] Sequential element (counter/c_reg[0]) is unused and will be removed from module program_control_1.
 WARNING: [Synth 8-3332] Sequential element (counter/o_OVERFLOW_reg) is unused and will be removed from module program_control_1.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 639.594 ; gain = 432.402
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -250,10 +215,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -265,16 +230,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 639.594 ; gain = 432.402
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -291,7 +256,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -304,7 +269,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -316,25 +281,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -373,11 +338,11 @@ Report Instance Areas:
 |2     |  inst   |time_divider |    87|
 +------+---------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 640.137 ; gain = 433.047
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 639.594 ; gain = 432.402
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 67 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 640.137 ; gain = 115.430
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:42 . Memory (MB): peak = 640.137 ; gain = 433.047
+Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 639.594 ; gain = 114.656
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 639.594 ; gain = 432.402
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -388,8 +353,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LDC => LDCE: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-23 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
+23 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:52 . Memory (MB): peak = 640.137 ; gain = 415.742
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 640.137 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 31 15:10:38 2021...
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 639.594 ; gain = 415.199
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 639.594 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 31 17:49:28 2021...

@@ -1,5 +1,5 @@
 module time_divider 
-#(parameter ratio=100000000) //分频比 100M=1e8  1e8/100000=1e3HZ->1ms
+#(parameter ratio=10000000) //分频比 100M=1e8  1e8/100000=1e3HZ->1ms
 (
     input i_CLK, //输入时钟信号
     input i_RST, //同步重置信号高电平有效

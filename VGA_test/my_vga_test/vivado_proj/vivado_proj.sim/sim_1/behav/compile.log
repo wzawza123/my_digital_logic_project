@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/vga_driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/vga_display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_display
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/time_divider_advanced.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/vivado_proj/vivado_proj.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

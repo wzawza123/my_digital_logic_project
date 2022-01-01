@@ -9,7 +9,7 @@ module program_control_1
     parameter state_rst=2'b00; //重置计数器
     parameter state_wait=2'b01; //等待计数器溢出
     parameter state_change=2'b10; //修改跳变值
-    parameter delay_time=2; //等待时间参数
+    parameter delay_time=1000; //等待时间参数
     //内部寄存器定义
     reg [1:0]current_state;
     reg counter_reset;
@@ -19,10 +19,10 @@ module program_control_1
     //初始化
     initial begin
         //外部线初始化
-        o_CTR<=1'b0;
+        o_CTR=1'b0;
         //内部寄存器初始化
-        current_state<=2'b00;
-        counter_reset<=2'b00;
+        current_state=2'b00;
+        counter_reset=2'b00;
     end
     //组合逻辑
     counter_overflow counter(.i_CLK(clk_slow),.i_LIM(delay_time),.i_RST(counter_reset),.o_OVERFLOW(c_overflow));

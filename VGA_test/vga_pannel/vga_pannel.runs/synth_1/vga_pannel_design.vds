@@ -1,0 +1,117 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Fri Dec 31 19:57:46 2021
+# Process ID: 6676
+# Current directory: D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/vga_pannel.runs/synth_1
+# Command line: vivado.exe -log vga_pannel_design.vds -mode batch -messageDb vivado.pb -notrace -source vga_pannel_design.tcl
+# Log file: D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/vga_pannel.runs/synth_1/vga_pannel_design.vds
+# Journal file: D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/vga_pannel.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source vga_pannel_design.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 224.105 ; gain = 17.520
+Command: synth_design -top vga_pannel_design -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2164 
+WARNING: [Synth 8-992] locked is already implicitly declared earlier [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/src/system_ctrl.v:71]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:27 . Memory (MB): peak = 315.035 ; gain = 108.449
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vga_pannel_design' [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/src/vga_pannel_design.v:10]
+	Parameter DUTY_CYCLE bound to: 50 - type: integer 
+	Parameter DIVIDE_DATA bound to: 10 - type: integer 
+	Parameter MULTIPLY_DATA bound to: 13 - type: integer 
+	Parameter H_DISP bound to: 11'b10000000000 
+	Parameter H_FRONT bound to: 11'b00000011000 
+	Parameter H_SYNC bound to: 11'b00010001000 
+	Parameter H_BACK bound to: 11'b00010100000 
+	Parameter H_TOTAL bound to: 11'b10101000000 
+	Parameter V_DISP bound to: 10'b1100000000 
+	Parameter V_FRONT bound to: 10'b0000000011 
+	Parameter V_SYNC bound to: 10'b0000000110 
+	Parameter V_BACK bound to: 10'b0000011101 
+	Parameter V_TOTAL bound to: 10'b1100100110 
+INFO: [Synth 8-638] synthesizing module 'system_ctrl' [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/src/system_ctrl.v:11]
+	Parameter DUTY_CYCLE bound to: 50 - type: integer 
+	Parameter DIVIDE_DATA bound to: 10 - type: integer 
+	Parameter MULTIPLY_DATA bound to: 13 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'system_delay' [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/src/system_ctrl.v:98]
+INFO: [Synth 8-256] done synthesizing module 'system_delay' (1#1) [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/src/system_ctrl.v:98]
+INFO: [Synth 8-638] synthesizing module 'pll_vga' [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/src/pll_vga.v:39]
+	Parameter DUTY_CYCLE bound to: 50 - type: integer 
+	Parameter DIVIDE_DATA bound to: 10 - type: integer 
+	Parameter MULTIPLY_DATA bound to: 13 - type: integer 
+ERROR: [Synth 8-439] module 'altpll' not found [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/src/pll_vga.v:72]
+	Parameter clk0_divide_by bound to: 10 - type: integer 
+	Parameter clk0_duty_cycle bound to: 50 - type: integer 
+	Parameter clk0_multiply_by bound to: 13 - type: integer 
+	Parameter clk0_phase_shift bound to: 0 - type: string 
+	Parameter compensate_clock bound to: CLK0 - type: string 
+	Parameter gate_lock_signal bound to: NO - type: string 
+	Parameter inclk0_input_frequency bound to: 32'sb00000000000000000100111000100000 
+	Parameter intended_device_family bound to: Cyclone II - type: string 
+	Parameter invalid_lock_multiplier bound to: 32'sb00000000000000000000000000000101 
+	Parameter lpm_hint bound to: CBX_MODULE_PREFIX=pll_vga - type: string 
+	Parameter lpm_type bound to: altpll - type: string 
+	Parameter operation_mode bound to: NORMAL - type: string 
+	Parameter port_activeclock bound to: PORT_UNUSED - type: string 
+	Parameter port_areset bound to: PORT_USED - type: string 
+	Parameter port_clkbad0 bound to: PORT_UNUSED - type: string 
+	Parameter port_clkbad1 bound to: PORT_UNUSED - type: string 
+	Parameter port_clkloss bound to: PORT_UNUSED - type: string 
+	Parameter port_clkswitch bound to: PORT_UNUSED - type: string 
+	Parameter port_configupdate bound to: PORT_UNUSED - type: string 
+	Parameter port_fbin bound to: PORT_UNUSED - type: string 
+	Parameter port_inclk0 bound to: PORT_USED - type: string 
+	Parameter port_inclk1 bound to: PORT_UNUSED - type: string 
+	Parameter port_locked bound to: PORT_USED - type: string 
+	Parameter port_pfdena bound to: PORT_UNUSED - type: string 
+	Parameter port_phasecounterselect bound to: PORT_UNUSED - type: string 
+	Parameter port_phasedone bound to: PORT_UNUSED - type: string 
+	Parameter port_phasestep bound to: PORT_UNUSED - type: string 
+	Parameter port_phaseupdown bound to: PORT_UNUSED - type: string 
+	Parameter port_pllena bound to: PORT_UNUSED - type: string 
+	Parameter port_scanaclr bound to: PORT_UNUSED - type: string 
+	Parameter port_scanclk bound to: PORT_UNUSED - type: string 
+	Parameter port_scanclkena bound to: PORT_UNUSED - type: string 
+	Parameter port_scandata bound to: PORT_UNUSED - type: string 
+	Parameter port_scandataout bound to: PORT_UNUSED - type: string 
+	Parameter port_scandone bound to: PORT_UNUSED - type: string 
+	Parameter port_scanread bound to: PORT_UNUSED - type: string 
+	Parameter port_scanwrite bound to: PORT_UNUSED - type: string 
+	Parameter port_clk0 bound to: PORT_USED - type: string 
+	Parameter port_clk1 bound to: PORT_UNUSED - type: string 
+	Parameter port_clk2 bound to: PORT_UNUSED - type: string 
+	Parameter port_clk3 bound to: PORT_UNUSED - type: string 
+	Parameter port_clk4 bound to: PORT_UNUSED - type: string 
+	Parameter port_clk5 bound to: PORT_UNUSED - type: string 
+	Parameter port_clkena0 bound to: PORT_UNUSED - type: string 
+	Parameter port_clkena1 bound to: PORT_UNUSED - type: string 
+	Parameter port_clkena2 bound to: PORT_UNUSED - type: string 
+	Parameter port_clkena3 bound to: PORT_UNUSED - type: string 
+	Parameter port_clkena4 bound to: PORT_UNUSED - type: string 
+	Parameter port_clkena5 bound to: PORT_UNUSED - type: string 
+	Parameter port_extclk0 bound to: PORT_UNUSED - type: string 
+	Parameter port_extclk1 bound to: PORT_UNUSED - type: string 
+	Parameter port_extclk2 bound to: PORT_UNUSED - type: string 
+	Parameter port_extclk3 bound to: PORT_UNUSED - type: string 
+	Parameter valid_lock_multiplier bound to: 32'sb00000000000000000000000000000001 
+WARNING: [Synth 8-693] zero replication count - replication ignored [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/src/pll_vga.v:79]
+WARNING: [Synth 8-693] zero replication count - replication ignored [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/src/pll_vga.v:86]
+WARNING: [Synth 8-693] zero replication count - replication ignored [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/src/pll_vga.v:93]
+ERROR: [Synth 8-285] failed synthesizing module 'pll_vga' [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/src/pll_vga.v:39]
+ERROR: [Synth 8-285] failed synthesizing module 'system_ctrl' [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/src/system_ctrl.v:11]
+ERROR: [Synth 8-285] failed synthesizing module 'vga_pannel_design' [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/vga_pannel/src/vga_pannel_design.v:10]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:29 . Memory (MB): peak = 332.949 ; gain = 126.363
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+7 Infos, 4 Warnings, 0 Critical Warnings and 5 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 31 19:58:16 2021...

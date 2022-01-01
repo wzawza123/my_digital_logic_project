@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Fri Dec 31 15:09:34 2021
-# Process ID: 17520
+# Start of session at: Fri Dec 31 17:48:45 2021
+# Process ID: 2204
 # Current directory: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/synth_1
 # Command line: vivado.exe -log program_control_1.vds -mode batch -messageDb vivado.pb -notrace -source program_control_1.tcl
 # Log file: D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.runs/synth_1/program_control_1.vds

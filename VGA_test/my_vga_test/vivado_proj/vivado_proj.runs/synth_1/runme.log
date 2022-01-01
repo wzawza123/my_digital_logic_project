@@ -1,0 +1,440 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10920 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 304.074 ; gain = 97.258
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/top.v:1]
+	Parameter DUTY_CYCLE bound to: 50 - type: integer 
+	Parameter DIVIDE_DATA bound to: 2 - type: integer 
+	Parameter MULTIPLY_DATA bound to: 1 - type: integer 
+	Parameter H_DISP bound to: 11'b01010000000 
+	Parameter H_FRONT bound to: 11'b00000010000 
+	Parameter H_SYNC bound to: 11'b00001100000 
+	Parameter H_BACK bound to: 11'b00000110000 
+	Parameter H_TOTAL bound to: 11'b01100100000 
+	Parameter V_DISP bound to: 10'b0111100000 
+	Parameter V_FRONT bound to: 10'b0000001010 
+	Parameter V_SYNC bound to: 10'b0000000010 
+	Parameter V_BACK bound to: 10'b0000100001 
+	Parameter V_TOTAL bound to: 10'b1000001101 
+INFO: [Synth 8-638] synthesizing module 'div' [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/time_divider_advanced.v:8]
+INFO: [Synth 8-256] done synthesizing module 'div' (1#1) [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/time_divider_advanced.v:8]
+INFO: [Synth 8-638] synthesizing module 'vga_display' [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/vga_display.v:10]
+	Parameter H_DISP bound to: 11'b01010000000 
+	Parameter V_DISP bound to: 10'b0111100000 
+	Parameter RED bound to: 12'b111100000000 
+	Parameter GREEN bound to: 12'b000011110000 
+	Parameter BLUE bound to: 12'b000000001111 
+	Parameter WHITE bound to: 12'b111111111111 
+	Parameter BLACK bound to: 12'b000000000000 
+	Parameter YELLOW bound to: 12'b000011111111 
+	Parameter CYAN bound to: 12'b101010101010 
+	Parameter ROYAL bound to: 12'b111111110000 
+INFO: [Synth 8-256] done synthesizing module 'vga_display' (2#1) [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/vga_display.v:10]
+INFO: [Synth 8-638] synthesizing module 'vga_driver' [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/vga_driver.v:10]
+	Parameter H_DISP bound to: 11'b01010000000 
+	Parameter H_FRONT bound to: 11'b00000010000 
+	Parameter H_SYNC bound to: 11'b00001100000 
+	Parameter H_BACK bound to: 11'b00000110000 
+	Parameter H_TOTAL bound to: 11'b01100100000 
+	Parameter V_DISP bound to: 10'b0111100000 
+	Parameter V_FRONT bound to: 10'b0000001010 
+	Parameter V_SYNC bound to: 10'b0000000010 
+	Parameter V_BACK bound to: 10'b0000100001 
+	Parameter V_TOTAL bound to: 10'b1000001101 
+INFO: [Synth 8-256] done synthesizing module 'vga_driver' (3#1) [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/vga_driver.v:10]
+INFO: [Synth 8-256] done synthesizing module 'top' (4#1) [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/top.v:1]
+WARNING: [Synth 8-3917] design top has port vga_blank_n driven by constant 1
+WARNING: [Synth 8-3917] design top has port vga_sync_n driven by constant 0
+WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[9]
+WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[8]
+WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[7]
+WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[6]
+WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[5]
+WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[4]
+WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[3]
+WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[2]
+WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[1]
+WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 341.445 ; gain = 134.629
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 341.445 ; gain = 134.629
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/vivado_proj/vivado_proj.srcs/constrs_1/new/my_vga_test1_top.xdc]
+Finished Parsing XDC File [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/vivado_proj/vivado_proj.srcs/constrs_1/new/my_vga_test1_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/vivado_proj/vivado_proj.srcs/constrs_1/new/my_vga_test1_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 640.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "vcnt" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 3     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   8 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module div 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module vga_display 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
++---Muxes : 
+	   8 Input     12 Bit        Muxes := 1     
+Module vga_driver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 3     
++---Registers : 
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "vga_driver_inst/vcnt" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design top has port vga_blank_n driven by constant 1
+WARNING: [Synth 8-3917] design top has port vga_sync_n driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 640.523 ; gain = 433.707
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\div_inst/cnt_reg[23] )
+INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[0]' (FDC) to 'vga_display_inst/vga_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[1]' (FDC) to 'vga_display_inst/vga_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[5]' (FDC) to 'vga_display_inst/vga_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[8]' (FDC) to 'vga_display_inst/vga_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[9]' (FDC) to 'vga_display_inst/vga_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[4]' (FDC) to 'vga_display_inst/vga_data_reg[6]'
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[6]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[16]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[17]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[18]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[19]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[20]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[21]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[22]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[23]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[24]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[25]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[26]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[27]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[28]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[29]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[0]) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 640.523 ; gain = 433.707
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 640.523 ; gain = 433.707
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     1|
+|3     |LUT1   |     4|
+|4     |LUT2   |     9|
+|5     |LUT3   |     6|
+|6     |LUT4   |     8|
+|7     |LUT5   |    14|
+|8     |LUT6   |    22|
+|9     |FDCE   |    30|
+|10    |FDPE   |     2|
+|11    |IBUF   |     2|
+|12    |OBUF   |    17|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+------------+------+
+|      |Instance           |Module      |Cells |
++------+-------------------+------------+------+
+|1     |top                |            |   116|
+|2     |  div_inst         |div         |     7|
+|3     |  vga_display_inst |vga_display |     6|
+|4     |  vga_driver_inst  |vga_driver  |    83|
++------+-------------------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 640.523 ; gain = 433.707
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 38 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 640.523 ; gain = 114.223
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 640.523 ; gain = 433.707
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+58 Infos, 50 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 640.523 ; gain = 416.305
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 640.523 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 01 16:30:34 2022...

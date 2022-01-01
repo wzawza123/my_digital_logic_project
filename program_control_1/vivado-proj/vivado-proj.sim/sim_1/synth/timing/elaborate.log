@@ -1,0 +1,12 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: F:/vivado/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto c1ce403156014630bbc868f96409fd62 --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot program_control_1_tb_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 xil_defaultlib.program_control_1_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "program_control_1_tb_time_synth.sdf", for root module "program_control_1_tb/pc1".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "program_control_1_tb_time_synth.sdf", for root module "program_control_1_tb/pc1".
+ERROR: [XSIM 43-3356]  Could not open file xsim.dir/program_control_1_tb_time_synth/xsim.type for writing.
+ERROR: [XSIM 43-3915] Encountered a fatal error. Cannot continue. Exiting... 

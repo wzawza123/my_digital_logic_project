@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2016.2 (64-bit)
+# SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+# IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+# Start of session at: Wed Dec 08 00:07:02 2021
+# Process ID: 17680
+# Current directory: D:/搜狗高速下载/CelluarAutomata_FPGA-master/CelluarAutomata_FPGA-master
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3852 D:\搜狗高速下载\CelluarAutomata_FPGA-master\CelluarAutomata_FPGA-master\CelluarAutomata_FPGA.xpr
+# Log file: D:/搜狗高速下载/CelluarAutomata_FPGA-master/CelluarAutomata_FPGA-master/vivado.log
+# Journal file: D:/搜狗高速下载/CelluarAutomata_FPGA-master/CelluarAutomata_FPGA-master\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/搜狗高速下载/CelluarAutomata_FPGA-master/CelluarAutomata_FPGA-master/CelluarAutomata_FPGA.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210292708836A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210292708836A]
+open_hw_target
+disconnect_hw_server localhost:3121
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210292708836A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210292708836A]
+open_hw_target

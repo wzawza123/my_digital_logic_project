@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/vivado-proj/vivado-proj.sim/sim_1/impl/timing/program_control_1_tb_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_control_1
+INFO: [VRFC 10-311] analyzing module time_divider
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/program_control_1_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module program_control_1_tb

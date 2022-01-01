@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1640934569">
-  <File Type="OPT-DCP" Name="program_control_1_opt.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1640944116">
   <File Type="ROUTE-STATUS-PB" Name="program_control_1_route_status.pb"/>
   <File Type="PA-TCL" Name="program_control_1.tcl"/>
+  <File Type="OPT-DCP" Name="program_control_1_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="program_control_1_timing_summary_init.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="program_control_1_methodology_drc_opted.rpt"/>
   <File Type="RDI-RDI" Name="program_control_1.vdi"/>
   <File Type="PWROPT-DRC" Name="program_control_1_drc_pwropted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="program_control_1_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="program_control_1_timing_summary_init.rpt"/>
   <File Type="OPT-DRC" Name="program_control_1_drc_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="program_control_1_pwropt.dcp"/>
   <File Type="OPT-HWDEF" Name="program_control_1.hwdef"/>
@@ -31,8 +31,8 @@
   <File Type="ROUTE-DRC" Name="program_control_1_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="program_control_1_drc_routed.pb"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="program_control_1_methodology_drc_routed.rpt"/>
-  <File Type="BG-BIT" Name="program_control_1.bit"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="program_control_1_methodology_drc_routed.pb"/>
+  <File Type="BG-BIT" Name="program_control_1.bit"/>
   <File Type="ROUTE-PWR" Name="program_control_1_power_routed.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="program_control_1_power_summary_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="program_control_1_power_routed.rpx"/>
@@ -59,14 +59,14 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../src/counter_overflow.v">
+    <File Path="$PPRDIR/../src/time_divider.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../src/time_divider.v">
+    <File Path="$PPRDIR/../src/counter_overflow.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

@@ -16,8 +16,8 @@ set_property parent.project_path D:/wza/vivado_program_files/project_for_digital
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 read_verilog -library xil_defaultlib {
-  D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/counter_overflow.v
   D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/time_divider.v
+  D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/counter_overflow.v
   D:/wza/vivado_program_files/project_for_digital_logic/program_control_1/src/program_control_1.v
 }
 foreach dcp [get_files -quiet -all *.dcp] {

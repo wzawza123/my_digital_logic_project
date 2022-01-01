@@ -1,0 +1,21 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: F:/vivado/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto 9e2b2ce650e04060894951c0f1be86d7 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_behav xil_defaultlib.top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 12 for port vga_data [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/top.v:88]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 12 for port vga_data [D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/top.v:112]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/time_divider_advanced.v" Line 8. Module div has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/vivado_proj/vivado_proj.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/src/time_divider_advanced.v" Line 8. Module div has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/wza/vivado_program_files/project_for_digital_logic/VGA_test/my_vga_test/vivado_proj/vivado_proj.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.div
+Compiling module xil_defaultlib.vga_display(H_DISP=11'b010100000...
+Compiling module xil_defaultlib.vga_driver(H_DISP=11'b0101000000...
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_behav

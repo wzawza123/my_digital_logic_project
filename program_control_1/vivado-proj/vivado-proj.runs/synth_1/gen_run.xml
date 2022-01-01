@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1640934569">
-  <File Type="RDS-PROPCONSTRS" Name="program_control_1_drc_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1640954521">
   <File Type="PA-TCL" Name="program_control_1.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="program_control_1_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="program_control_1.vds"/>
   <File Type="RDS-UTIL" Name="program_control_1_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="program_control_1_utilization_synth.pb"/>
@@ -10,14 +10,14 @@
   <File Type="VDS-TIMING-PB" Name="program_control_1_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../src/counter_overflow.v">
+    <File Path="$PPRDIR/../src/time_divider.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../src/time_divider.v">
+    <File Path="$PPRDIR/../src/counter_overflow.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
