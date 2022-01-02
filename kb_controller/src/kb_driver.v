@@ -16,7 +16,7 @@ module kb_driver1
     //combinational circuits
     assign o_done=(read_cnt>=4'd9)?4'b1:4'b0;
 
-    always @(negedge i_sclk or i_rst_n) begin
+    always @(negedge i_sclk or negedge i_rst_n) begin
         if(!i_rst_n) begin
             read_cnt <= 4'b0;
             o_frame_data <= 8'b0;
