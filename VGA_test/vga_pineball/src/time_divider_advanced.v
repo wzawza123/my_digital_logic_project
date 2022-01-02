@@ -2,7 +2,7 @@
 /***************************************
 晶振频率 fc = 100MHz
 输出频率 fo = 1kHz（根据需要可以设为任意值）
-控制参数 K  = (fo*2^N)/fc = 2147483648
+控制参数 K  = (fo*2^N)/fc = 2791728742
 参数 N = 2^32,(32为计数器的位宽)
 ****************************************/
 module div(
@@ -17,7 +17,7 @@ always @(posedge clk or posedge rst)
     if(rst)
         cnt <= 0;
     else
-        cnt <= cnt + 32'd2791728742;  //计数器步长K
+        cnt <= cnt + 32'd1073741824;  //计数器步长K
 
 always @(posedge clk or posedge rst)
     if(rst)
