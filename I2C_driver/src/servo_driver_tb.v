@@ -14,13 +14,13 @@ module servo_driver_tb ();
     );
     integer i;
     initial begin
-        i_rst_n=1;
+        i_rst_n=1; 
         i_clk=0;
         #5
         i_rst_n=0;
         #5
         i_rst_n=1;
-        for (i = 0;i<600 ;i=i+1 ) begin
+        for (i = 0;i<20000 ;i=i+1 ) begin
             #5
             i_clk=0;
             #5
@@ -30,6 +30,6 @@ module servo_driver_tb ();
     initial begin   
         $dumpfile("./build/wave.vcd");  // 指定VCD文件的名字为wave.vcd，仿真信息将记录到此文件
         $dumpvars(0, servo_driver_tb);  // 指定层次数为0，则tb_code 模块及其下面各层次的所有信号将被记录
-        #10000 $finish;
+        #20000 $finish;
     end
 endmodule

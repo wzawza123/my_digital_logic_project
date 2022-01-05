@@ -32,10 +32,10 @@ module servo_driver (
     localparam pwm0_off_h_data = 8'h00;
     localparam pwm0_off_l_data = 8'hd8;
     //reg addr setting
-    localparam pwm0_on_l_addr = 8'd6;
-    localparam pwm0_on_h_addr = 8'd7;
-    localparam pwm0_off_l_addr = 8'd8;
-    localparam pwm0_off_h_addr = 8'd9;
+    localparam pwm0_on_l_addr = 8'h0A;
+    localparam pwm0_on_h_addr = 8'h0B;
+    localparam pwm0_off_l_addr = 8'h0C;
+    localparam pwm0_off_h_addr = 8'h0D;
 
 //======register definitions
     reg [3:0] current_state;
@@ -47,9 +47,9 @@ module servo_driver (
     wire controller_clk;
     wire complete; //compelete signal from frame output
 //======instantiation
-    //generate the clk signal for controller
+    //generate the clk signal for controller 100Hz
     time_divider
-    #(2)
+    #(1000000)
     controller_clk_generator
     (
         .i_clk(i_clk),
@@ -70,7 +70,7 @@ module servo_driver (
     );
 //======sequencial circuit
     //for mst
-    always @(posedge i_clk or negedge i_rst_n) begin
+    always @(posedge i_clk or negedge i_rst_n or posedge complete) begin
         if(!i_rst_n) begin
             current_state=state_set_mode_sleep;
             start_flag=0;
@@ -80,20 +80,23 @@ module servo_driver (
                 state_set_mode_sleep: begin
                     gen_data=mode_sleep_data;
                     gen_register_addr=mode_reg_addr;
+                    $display("gen_data:%h gen_register:%h",gen_data,gen_register_addr);
+                    next_state=state_setf;
                     send_byte;
-                    current_state=state_setf;
                 end
                 state_setf: begin
                     gen_data=frequency_data;
                     gen_register_addr=frequency_reg_addr;
+                    $display("gen_data:%h gen_register:%h",gen_data,gen_register_addr);
+                    next_state=state_set_mode_run;
                     send_byte;
-                    current_state=state_set_mode_run;
                 end
                 state_set_mode_run: begin
                     gen_data=mode_run_data;
                     gen_register_addr=mode_reg_addr;
+                    $display("gen_data:%h gen_register:%h",gen_data,gen_register_addr);
+                    next_state=state_update;
                     send_byte;
-                    current_state=state_update;
                 end
                 state_update: begin
                     current_state=state_send_on_h;
@@ -101,26 +104,36 @@ module servo_driver (
                 state_send_on_h:begin
                     gen_data=pwm0_on_h_data;
                     gen_register_addr=pwm0_on_h_addr;
+                    $display("gen_data:%h gen_register:%h",gen_data,gen_register_addr);
+                    next_state=state_send_on_l;
                     send_byte;
-                    current_state=state_send_on_l;
                 end
                 state_send_on_l:begin
                     gen_data=pwm0_on_l_data;
                     gen_register_addr=pwm0_on_l_addr;
+                    $display("gen_data:%h gen_register:%h",gen_data,gen_register_addr);
+                    next_state=state_send_off_h;
                     send_byte;
-                    current_state=state_send_off_h;
                 end
                 state_send_off_h:begin
                     gen_data=pwm0_off_h_data;
                     gen_register_addr=pwm0_off_h_addr;
+                    $display("gen_data:%h gen_register:%h",gen_data,gen_register_addr);
+                    next_state=state_send_off_l;
                     send_byte;
-                    current_state=state_send_off_l;
                 end
-                state_send_off_l:begin
-                    gen_data=pwm0_on_l_data;
-                    gen_register_addr=pwm0_on_l_addr;
+                state_send_off_l:begin 
+                    gen_data=pwm0_off_l_data;
+                    gen_register_addr=pwm0_off_l_addr;
+                    $display("gen_data:%h gen_register:%h",gen_data,gen_register_addr);
+                    next_state=state_update;
                     send_byte;
-                    current_state=state_update;
+                end
+                state_wait: begin
+                    if(complete)begin
+                        start_flag=0;
+                        current_state=next_state;
+                    end
                 end
                 default:;
             endcase
@@ -130,9 +143,7 @@ module servo_driver (
 task send_byte;
     begin
         start_flag=1;
-        @(posedge complete)
-        @(posedge i_clk)
-        start_flag=0;
+        current_state=state_wait;
     end
 endtask
 endmodule

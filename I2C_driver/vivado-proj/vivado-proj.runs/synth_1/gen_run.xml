@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1641201054">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1641218354">
   <File Type="RDS-PROPCONSTRS" Name="servo_driver_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="servo_driver.tcl"/>
   <File Type="RDS-RDS" Name="servo_driver.vds"/>
@@ -47,7 +47,14 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/servo_driver_top.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/servo_driver_top.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

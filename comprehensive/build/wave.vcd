@@ -1,0 +1,16 @@
+$date
+	Wed Jan  5 19:33:13 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module top_tb $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+$end
+#10000

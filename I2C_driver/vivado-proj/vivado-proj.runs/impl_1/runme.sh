@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log servo_driver.vdi -applog -m64 -messageDb vivado.pb -mode batch -source servo_driver.tcl -notrace
 
 

@@ -46,13 +46,12 @@ module I2C_frame_output
 //=======instantiation
     //generate the clock output for the I2C
     time_divider
-    #(2) //1 for test
+    #(1000000) //1kHz
     clk_generator
     (
         .i_clk(i_clk),
         .rst_n(i_rst_n),
-        .o_clk(controller_clk
-)
+        .o_clk(controller_clk)
     );
 //======sequential logic
     //main loop for FSM switching
@@ -75,7 +74,7 @@ module I2C_frame_output
         end
     end
     //data and clk generate
-    always @(controller_clk) begin
+    always @(posedge controller_clk or negedge controller_clk or negedge i_rst_n) begin
         if(!i_rst_n)begin
             io_SDA<=1;
             o_SCL<=1;

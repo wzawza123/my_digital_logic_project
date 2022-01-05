@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1641201130">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1641218354">
   <File Type="OPT-DCP" Name="servo_driver_opt.dcp"/>
   <File Type="ROUTE-STATUS-PB" Name="servo_driver_route_status.pb"/>
   <File Type="PA-TCL" Name="servo_driver.tcl"/>
@@ -96,7 +96,14 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/servo_driver_top.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/servo_driver_top.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

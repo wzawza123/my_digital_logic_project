@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
-| Date         : Mon Jan 03 17:13:09 2022
+| Date         : Mon Jan 03 22:00:32 2022
 | Host         : DESKTOP-JNETMH0 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file servo_driver_control_sets_placed.rpt
 | Design       : servo_driver
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     2 |
-| Unused register locations in slices containing registers |    14 |
+| Number of unique control sets                            |    13 |
+| Unused register locations in slices containing registers |    78 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,11 +33,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |               1 |            1 |
-| No           | Yes                   | No                     |               1 |            1 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |               0 |            0 |
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |              26 |           11 |
+| No           | Yes                   | No                     |               3 |            3 |
+| Yes          | No                    | No                     |              11 |            2 |
+| Yes          | No                    | Yes                    |               9 |            4 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -45,11 +45,22 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+--------------------+---------------+-----------------------------------------+------------------+----------------+
-|    Clock Signal    | Enable Signal |             Set/Reset Signal            | Slice Load Count | Bel Load Count |
-+--------------------+---------------+-----------------------------------------+------------------+----------------+
-|  i_clk_IBUF_BUFG   |               | I2C_driver/clk_generator/count_reg[0]_0 |                1 |              1 |
-|  i_rst_n_IBUF_BUFG |               | I2C_driver/clk_generator/count_reg[0]_0 |                1 |              1 |
-+--------------------+---------------+-----------------------------------------+------------------+----------------+
++----------------------------------------------+-----------------------------+---------------------------------------------+------------------+----------------+
+|                 Clock Signal                 |        Enable Signal        |               Set/Reset Signal              | Slice Load Count | Bel Load Count |
++----------------------------------------------+-----------------------------+---------------------------------------------+------------------+----------------+
+| ~I2C_driver/clk_generator/controller_clk     |                             | I2C_driver/clk_generator/io_SDA_reg_C       |                1 |              1 |
+| ~I2C_driver/clk_generator/controller_clk     |                             | I2C_driver/clk_generator/io_SDA_reg_P       |                1 |              1 |
+| ~I2C_driver/clk_generator/controller_clk     |                             | I2C_driver/clk_generator/o_SCL_reg_C        |                1 |              1 |
+| ~I2C_driver/clk_generator/controller_clk     |                             | I2C_driver/clk_generator/rst_complete_reg_C |                1 |              1 |
+| ~I2C_driver/clk_generator/controller_clk     |                             | I2C_driver/clk_generator/rst_complete_reg_P |                1 |              1 |
+|  I2C_driver/clk_generator/io_SDA_reg_P       |                             | I2C_driver/clk_generator/io_SDA_reg_C       |                1 |              1 |
+|  I2C_driver/clk_generator/rst_complete_reg_P |                             | I2C_driver/clk_generator/rst_complete_reg_C |                1 |              1 |
+|  i_clk_IBUF_BUFG                             |                             |                                             |                1 |              1 |
+| ~i_rst_n_IBUF                                |                             | I2C_driver/clk_generator/o_SCL_reg_C        |                1 |              1 |
+|  i_clk_IBUF_BUFG                             | current_state[3]_i_1__0_n_0 | I2C_driver/clk_generator/count_reg[0]_0     |                2 |              4 |
+|  I2C_driver/clk_generator/controller_clk     | i_rst_n_IBUF_BUFG           | I2C_driver/clk_generator/count_reg[0]_0     |                2 |              5 |
+|  i_clk_IBUF_BUFG                             | next_state[2]_i_1_n_0       |                                             |                2 |             11 |
+|  i_clk_IBUF_BUFG                             |                             | I2C_driver/clk_generator/count_reg[0]_0     |                6 |             21 |
++----------------------------------------------+-----------------------------+---------------------------------------------+------------------+----------------+
 
 
