@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Thu Jan 06 14:44:16 2022">
+<application name="pa" timeStamp="Thu Jan 06 16:47:47 2022">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="34768f67e7834eb79439b18d87bc8e9e" type="ProjectID"/>
-<property name="ProjectIteration" value="65" type="ProjectIteration"/>
+<property name="ProjectIteration" value="66" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -26,7 +26,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="OpenProject" value="1" type="JavaHandler"/>
 <property name="OpenRecentTarget" value="11" type="JavaHandler"/>
 <property name="ProgramDevice" value="32" type="JavaHandler"/>
-<property name="RunBitgen" value="42" type="JavaHandler"/>
+<property name="RunBitgen" value="43" type="JavaHandler"/>
 <property name="RunImplementation" value="30" type="JavaHandler"/>
 <property name="RunSchematic" value="1" type="JavaHandler"/>
 <property name="RunSynthesis" value="9" type="JavaHandler"/>
@@ -36,17 +36,6 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ViewLayoutCmd" value="1" type="JavaHandler"/>
 <property name="ViewTaskImplementation" value="14" type="JavaHandler"/>
 <property name="ViewTaskSynthesis" value="1" type="JavaHandler"/>
-</item>
-<item name="Gui Resources Info">
-<property name="PAResourceCommand.PACommandNames_OPEN_PROJECT, Open Project..." value="1" type="GuiResourceData"/>
-<property name="PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/servo_bot/servo_bot.xpr, 0" value="1" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_FILE, File" value="2" type="GuiResourceData"/>
-<property name="PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, Open Recent Project" value="1" type="GuiResourceData"/>
-</item>
-<item name="Other">
-<property name="GuiMode" value="76" type="GuiMode"/>
-<property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="64" type="TclMode"/>
 </item>
 </section>
 </application>
