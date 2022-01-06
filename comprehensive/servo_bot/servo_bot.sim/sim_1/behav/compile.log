@@ -1,0 +1,24 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/kb_driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module kb_driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/time_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module time_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/vga_driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/data_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module data_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/kb_controller_advanced.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module kb_controller_advanced
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/pwm_driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm_driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/vga_display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_display
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/vga_time_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module div
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2458] undeclared symbol clk, assumed default net type wire [D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/top.v:116]
+INFO: [VRFC 10-2458] undeclared symbol rst_n, assumed default net type wire [D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/top.v:116]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/servo_bot/servo_bot.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -48,7 +48,6 @@ set_msg_config -id {HDL 9-1654} -limit 100000
 start_step write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param xicom.use_bs_reader 1
   set_param simulator.modelsimInstallPath F:/modeltech_pe_10.4c/win32pe
   open_checkpoint pwm_driver_routed.dcp
   set_property webtalk.parent_dir D:/wza/vivado_program_files/project_for_digital_logic/pwm_driver/vivado-proj/vivado-proj.cache/wt [current_project]

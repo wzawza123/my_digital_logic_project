@@ -19,8 +19,8 @@ module data_controller (
     localparam state_replay=1;
     //servo
     localparam servo_default=150;
-    localparam servo_step=1;
-    localparam servo_upper_limit=250;
+    localparam servo_step=5;
+    localparam servo_upper_limit=965;
     localparam servo_lower_limit=50;
     //keyboard
     localparam kb_w=0;
@@ -37,7 +37,7 @@ module data_controller (
     wire controller_clk; //clk for controller
 //register definitions
     reg [4:0] controller_state;
-    time_divider #(2)
+    time_divider #(10000000)
     time_generator
     (
         .i_clk(i_clk),
@@ -58,13 +58,13 @@ module data_controller (
             controller_state<=state_update;
         end
         else begin
-            if(i_keyboard_status[w]) begin
+            if(i_keyboard_status[kb_w]) begin
                 servo0=servo0+servo_step;
                 if(servo0>servo_upper_limit) begin
                     servo0=servo_upper_limit;
                 end
             end
-            if(i_keyboard_status[s]) begin
+            if(i_keyboard_status[kb_s]) begin
                 servo0=servo0-servo_step;
                 if(servo0<servo_lower_limit) begin
                     servo0=servo_lower_limit;

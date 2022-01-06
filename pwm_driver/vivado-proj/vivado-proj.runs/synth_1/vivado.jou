@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Mon Jan 03 23:00:14 2022
-# Process ID: 11392
+# Start of session at: Thu Jan 06 14:47:49 2022
+# Process ID: 15168
 # Current directory: D:/wza/vivado_program_files/project_for_digital_logic/pwm_driver/vivado-proj/vivado-proj.runs/synth_1
 # Command line: vivado.exe -log pwm_driver.vds -mode batch -messageDb vivado.pb -notrace -source pwm_driver.tcl
 # Log file: D:/wza/vivado_program_files/project_for_digital_logic/pwm_driver/vivado-proj/vivado-proj.runs/synth_1/pwm_driver.vds

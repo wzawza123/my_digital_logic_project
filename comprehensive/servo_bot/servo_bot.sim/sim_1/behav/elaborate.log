@@ -1,0 +1,26 @@
+Vivado Simulator 2016.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: F:/vivado/Vivado/2016.2/bin/unwrapped/win64.o/xelab.exe -wto e9127ddbdadd47eeaba062e2af3fe03a --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/vga_time_divider.v" Line 8. Module div has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/servo_bot/servo_bot.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/vga_time_divider.v" Line 8. Module div has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/servo_bot/servo_bot.sim/sim_1/behav/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.kb_driver
+Compiling module xil_defaultlib.kb_controller_advanced
+Compiling module xil_defaultlib.time_divider(ratio=10000000)
+Compiling module xil_defaultlib.data_controller
+Compiling module xil_defaultlib.time_divider(ratio=1000)
+Compiling module xil_defaultlib.pwm_driver
+Compiling module xil_defaultlib.vga_display(H_DISP=11'b010100000...
+Compiling module xil_defaultlib.div
+Compiling module xil_defaultlib.vga_driver(H_DISP=11'b0101000000...
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_tb_behav

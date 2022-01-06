@@ -1,0 +1,69 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Thu Jan 06 00:24:47 2022
+| Host         : DESKTOP-JNETMH0 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    16 |
+| Unused register locations in slices containing registers |    93 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               2 |            2 |
+| No           | No                    | Yes                    |             102 |           32 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              35 |           20 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------+-----------------------------------------------------+---------------------------------------+------------------+----------------+
+|              Clock Signal              |                    Enable Signal                    |            Set/Reset Signal           | Slice Load Count | Bel Load Count |
++----------------------------------------+-----------------------------------------------------+---------------------------------------+------------------+----------------+
+| ~i_ps2_sclk_IBUF_BUFG                  | kb_controller_inst/kbdriver/o_frame_data[0]_i_1_n_0 | servo_driver0/div_inst/count_reg[0]_0 |                1 |              1 |
+| ~i_ps2_sclk_IBUF_BUFG                  | kb_controller_inst/kbdriver/o_frame_data[1]_i_1_n_0 | servo_driver0/div_inst/count_reg[0]_0 |                1 |              1 |
+| ~i_ps2_sclk_IBUF_BUFG                  | kb_controller_inst/kbdriver/o_frame_data[2]_i_1_n_0 | servo_driver0/div_inst/count_reg[0]_0 |                1 |              1 |
+| ~i_ps2_sclk_IBUF_BUFG                  | kb_controller_inst/kbdriver/o_frame_data[3]_i_1_n_0 | servo_driver0/div_inst/count_reg[0]_0 |                1 |              1 |
+| ~i_ps2_sclk_IBUF_BUFG                  | kb_controller_inst/kbdriver/o_frame_data[4]_i_1_n_0 | servo_driver0/div_inst/count_reg[0]_0 |                1 |              1 |
+| ~i_ps2_sclk_IBUF_BUFG                  | kb_controller_inst/kbdriver/o_frame_data[7]_i_1_n_0 | servo_driver0/div_inst/count_reg[0]_0 |                1 |              1 |
+| ~i_ps2_sclk_IBUF_BUFG                  | kb_controller_inst/kbdriver/o_frame_data[5]_i_1_n_0 | servo_driver0/div_inst/count_reg[0]_0 |                1 |              1 |
+| ~i_ps2_sclk_IBUF_BUFG                  | kb_controller_inst/kbdriver/o_frame_data[6]_i_1_n_0 | servo_driver0/div_inst/count_reg[0]_0 |                1 |              1 |
+|  i_clk_IBUF_BUFG                       |                                                     |                                       |                2 |              2 |
+|  kb_controller_inst/kbdriver/done      |                                                     | servo_driver0/div_inst/count_reg[0]_0 |                2 |              3 |
+| ~i_ps2_sclk_IBUF_BUFG                  | kb_controller_inst/kbdriver/read_cnt[3]_i_1_n_0     | servo_driver0/div_inst/count_reg[0]_0 |                2 |              4 |
+|  div_inst/CLK                          | vga_driver_inst/vcnt                                | servo_driver0/div_inst/count_reg[0]_0 |                2 |             10 |
+|  data_ctr_ist/time_generator/CLK       | i_rst_n_IBUF                                        | servo_driver0/div_inst/count_reg[0]_0 |                8 |             13 |
+|  servo_driver0/div_inst/counter_reg[0] |                                                     | servo_driver0/div_inst/count_reg[0]_0 |                4 |             13 |
+|  div_inst/CLK                          |                                                     | servo_driver0/div_inst/count_reg[0]_0 |                8 |             19 |
+|  i_clk_IBUF_BUFG                       |                                                     | servo_driver0/div_inst/count_reg[0]_0 |               18 |             67 |
++----------------------------------------+-----------------------------------------------------+---------------------------------------+------------------+----------------+
+
+

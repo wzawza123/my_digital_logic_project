@@ -5,13 +5,11 @@ module time_divider
 (
     input i_clk,
     input rst_n,
-    output o_clk
+    output reg o_clk=0
 );
     //registers definitions
     reg [31:0]count;
     integer lim=ratio/2;
-    //combinational circuits
-    assign o_clk=count>=lim?1'b1:1'b0;
     //counting
     always @(posedge i_clk or negedge rst_n) begin
         if(!rst_n) begin
@@ -23,6 +21,7 @@ module time_divider
             end
             else begin
                 count<=32'b0;
+                o_clk<=~o_clk;
             end
         end
     end
