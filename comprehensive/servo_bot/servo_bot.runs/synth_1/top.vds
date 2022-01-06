@@ -2,8 +2,8 @@
 # Vivado v2016.2 (64-bit)
 # SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
 # IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
-# Start of session at: Thu Jan 06 16:47:49 2022
-# Process ID: 12120
+# Start of session at: Thu Jan 06 17:31:10 2022
+# Process ID: 1904
 # Current directory: D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/servo_bot/servo_bot.runs/synth_1
 # Command line: vivado.exe -log top.vds -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/servo_bot/servo_bot.runs/synth_1/top.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17312 
+INFO: Helper process launched with PID 17160 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 304.262 ; gain = 97.301
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 304.680 ; gain = 97.551
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/top.v:1]
 	Parameter DUTY_CYCLE bound to: 50 - type: integer 
@@ -53,7 +53,7 @@ INFO: [Synth 8-638] synthesizing module 'data_controller' [D:/wza/vivado_program
 	Parameter state_replay bound to: 1 - type: integer 
 	Parameter servo_default bound to: 150 - type: integer 
 	Parameter servo_step bound to: 5 - type: integer 
-	Parameter servo_upper_limit bound to: 965 - type: integer 
+	Parameter servo_upper_limit bound to: 250 - type: integer 
 	Parameter servo_lower_limit bound to: 50 - type: integer 
 	Parameter kb_w bound to: 0 - type: integer 
 	Parameter kb_s bound to: 1 - type: integer 
@@ -88,6 +88,10 @@ INFO: [Synth 8-638] synthesizing module 'vga_display' [D:/wza/vivado_program_fil
 	Parameter YELLOW bound to: 12'b000011111111 
 	Parameter CYAN bound to: 12'b101010101010 
 	Parameter ROYAL bound to: 12'b111111110000 
+	Parameter block_x_bias bound to: 50 - type: integer 
+	Parameter block_x_ratio bound to: 3 - type: integer 
+	Parameter block_y_0 bound to: 100 - type: integer 
+	Parameter block_size bound to: 20 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'vga_display' (6#1) [D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/vga_display.v:10]
 INFO: [Synth 8-638] synthesizing module 'div' [D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/vga_time_divider.v:7]
 INFO: [Synth 8-256] done synthesizing module 'div' (7#1) [D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/vga_time_divider.v:7]
@@ -106,16 +110,6 @@ INFO: [Synth 8-256] done synthesizing module 'vga_driver' (8#1) [D:/wza/vivado_p
 INFO: [Synth 8-256] done synthesizing module 'top' (9#1) [D:/wza/vivado_program_files/project_for_digital_logic/comprehensive/src/top.v:1]
 WARNING: [Synth 8-3917] design top has port vga_blank_n driven by constant 1
 WARNING: [Synth 8-3917] design top has port vga_sync_n driven by constant 0
-WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[9]
-WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[8]
-WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[7]
-WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[6]
-WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[5]
-WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[4]
-WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[3]
-WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[2]
-WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[1]
-WARNING: [Synth 8-3331] design vga_display has unconnected port vga_ypos[0]
 WARNING: [Synth 8-3331] design data_controller has unconnected port replaying
 WARNING: [Synth 8-3331] design data_controller has unconnected port i_keyboard_status[9]
 WARNING: [Synth 8-3331] design data_controller has unconnected port i_keyboard_status[8]
@@ -126,7 +120,7 @@ WARNING: [Synth 8-3331] design data_controller has unconnected port i_keyboard_s
 WARNING: [Synth 8-3331] design data_controller has unconnected port i_keyboard_status[3]
 WARNING: [Synth 8-3331] design data_controller has unconnected port i_keyboard_status[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 341.645 ; gain = 134.684
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 341.156 ; gain = 134.027
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -136,7 +130,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 341.645 ; gain = 134.684
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 341.156 ; gain = 134.027
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -152,28 +146,28 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 641.910 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 642.270 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "o_keyboard_status" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "release_flag" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "vcnt" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -186,6 +180,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     14 Bit       Adders := 1     
 	   2 Input     13 Bit       Adders := 3     
 	   2 Input     11 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 3     
@@ -199,7 +194,6 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 6     
 +---Muxes : 
 	   2 Input     13 Bit        Muxes := 7     
-	   8 Input     12 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 1     
 	   2 Input     11 Bit        Muxes := 1     
 	  14 Input     10 Bit        Muxes := 1     
@@ -259,10 +253,10 @@ Detailed RTL Component Info :
 	   2 Input     13 Bit        Muxes := 1     
 Module vga_display 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
 +---Registers : 
 	               12 Bit    Registers := 1     
-+---Muxes : 
-	   8 Input     12 Bit        Muxes := 1     
 Module div 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -293,7 +287,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 641.910 ; gain = 434.949
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -301,9 +295,9 @@ INFO: [Synth 8-5546] ROM "vga_driver_inst/vcnt" won't be mapped to RAM because i
 WARNING: [Synth 8-3917] design top has port vga_blank_n driven by constant 1
 WARNING: [Synth 8-3917] design top has port vga_sync_n driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Parallel Reinference  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 642.270 ; gain = 435.141
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -343,12 +337,17 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\div_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\div_inst/cnt_reg[21] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\div_inst/cnt_reg[22] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\div_inst/cnt_reg[23] )
-INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[0]' (FDC) to 'vga_display_inst/vga_data_reg[2]'
-INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[1]' (FDC) to 'vga_display_inst/vga_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[0]' (FDC) to 'vga_display_inst/vga_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[1]' (FDC) to 'vga_display_inst/vga_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[2]' (FDC) to 'vga_display_inst/vga_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[3]' (FDC) to 'vga_display_inst/vga_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[4]' (FDC) to 'vga_display_inst/vga_data_reg[7]'
 INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[5]' (FDC) to 'vga_display_inst/vga_data_reg[7]'
-INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[8]' (FDC) to 'vga_display_inst/vga_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[6]' (FDC) to 'vga_display_inst/vga_data_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\vga_display_inst/vga_data_reg[7] )
+INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[8]' (FDC) to 'vga_display_inst/vga_data_reg[11]'
 INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[9]' (FDC) to 'vga_display_inst/vga_data_reg[11]'
-INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[4]' (FDC) to 'vga_display_inst/vga_data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_display_inst/vga_data_reg[10]' (FDC) to 'vga_display_inst/vga_data_reg[11]'
 WARNING: [Synth 8-3332] Sequential element (kb_controller_inst/o_keyboard_status_reg[9]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (kb_controller_inst/o_keyboard_status_reg[8]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (kb_controller_inst/o_keyboard_status_reg[7]) is unused and will be removed from module top.
@@ -387,16 +386,83 @@ WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[26]) is unused and 
 WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[27]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[28]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (div_inst/cnt_reg[29]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[10]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[9]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[6]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[5]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[4]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[3]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[2]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[1]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (vga_display_inst/vga_data_reg[0]) is unused and will be removed from module top.
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[20]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[19]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[18]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[17]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[23]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[22]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[21]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[10]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[12]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[11]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[16]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[15]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[14]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[13]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[24]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[30]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[24]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[31]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[24]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[29]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[24]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[28]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[24]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[25]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[24]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[24]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[26]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[27]' (FDC) to 'i_2/servo_driver0/div_inst/count_reg[26]'
+INFO: [Synth 8-3886] merging instance 'i_2/servo_driver0/div_inst/count_reg[26]' (FDC) to 'i_2/data_ctr_ist/time_generator/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'i_2/data_ctr_ist/time_generator/count_reg[27]' (FDC) to 'i_2/data_ctr_ist/time_generator/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'i_2/data_ctr_ist/time_generator/count_reg[24]' (FDC) to 'i_2/data_ctr_ist/time_generator/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'i_2/data_ctr_ist/time_generator/count_reg[30]' (FDC) to 'i_2/data_ctr_ist/time_generator/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'i_2/data_ctr_ist/time_generator/count_reg[26]' (FDC) to 'i_2/data_ctr_ist/time_generator/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'i_2/data_ctr_ist/time_generator/count_reg[28]' (FDC) to 'i_2/data_ctr_ist/time_generator/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'i_2/data_ctr_ist/time_generator/count_reg[29]' (FDC) to 'i_2/data_ctr_ist/time_generator/count_reg[31]'
+INFO: [Synth 8-3886] merging instance 'i_2/data_ctr_ist/time_generator/count_reg[25]' (FDC) to 'i_2/data_ctr_ist/time_generator/count_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\data_ctr_ist/time_generator/count_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\vga_driver_inst/hcnt_reg[10] )
+WARNING: [Synth 8-3332] Sequential element (data_ctr_ist/time_generator/count_reg[24]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data_ctr_ist/time_generator/count_reg[25]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data_ctr_ist/time_generator/count_reg[26]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data_ctr_ist/time_generator/count_reg[27]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data_ctr_ist/time_generator/count_reg[28]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data_ctr_ist/time_generator/count_reg[29]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data_ctr_ist/time_generator/count_reg[30]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (data_ctr_ist/time_generator/count_reg[31]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[16]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[17]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[18]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[19]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[20]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[21]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[22]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[23]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[24]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[25]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[26]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[27]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[28]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[29]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[30]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (servo_driver0/div_inst/count_reg[31]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (vga_driver_inst/hcnt_reg[10]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 642.270 ; gain = 435.141
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -410,10 +476,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -425,16 +491,16 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 642.270 ; gain = 435.141
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:25 ; elapsed = 00:00:42 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -451,7 +517,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -464,7 +530,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -476,25 +542,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:36 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -511,14 +577,14 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
-|2     |CARRY4 |    28|
-|3     |LUT1   |    29|
-|4     |LUT2   |    57|
-|5     |LUT3   |     9|
-|6     |LUT4   |    64|
-|7     |LUT5   |    65|
-|8     |LUT6   |    43|
-|9     |FDCE   |   131|
+|2     |CARRY4 |    29|
+|3     |LUT1   |    42|
+|4     |LUT2   |    54|
+|5     |LUT3   |    12|
+|6     |LUT4   |    54|
+|7     |LUT5   |    32|
+|8     |LUT6   |    54|
+|9     |FDCE   |    95|
 |10    |FDPE   |     6|
 |11    |FDRE   |     2|
 |12    |IBUF   |     4|
@@ -529,25 +595,25 @@ Report Instance Areas:
 +------+---------------------+-----------------------------+------+
 |      |Instance             |Module                       |Cells |
 +------+---------------------+-----------------------------+------+
-|1     |top                  |                             |   471|
-|2     |  data_ctr_ist       |data_controller              |   171|
-|3     |    time_generator   |time_divider                 |    82|
+|1     |top                  |                             |   417|
+|2     |  data_ctr_ist       |data_controller              |   157|
+|3     |    time_generator   |time_divider                 |    62|
 |4     |  div_inst           |div                          |     7|
-|5     |  kb_controller_inst |kb_controller_advanced       |    38|
-|6     |    kbdriver         |kb_driver                    |    33|
-|7     |  servo_driver0      |pwm_driver                   |   131|
-|8     |    div_inst         |time_divider__parameterized0 |    84|
-|9     |  vga_display_inst   |vga_display                  |     6|
-|10    |  vga_driver_inst    |vga_driver                   |    81|
+|5     |  kb_controller_inst |kb_controller_advanced       |    46|
+|6     |    kbdriver         |kb_driver                    |    31|
+|7     |  servo_driver0      |pwm_driver                   |    78|
+|8     |    div_inst         |time_divider__parameterized0 |    26|
+|9     |  vga_display_inst   |vga_display                  |     9|
+|10    |  vga_driver_inst    |vga_driver                   |    83|
 +------+---------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 641.910 ; gain = 434.949
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 642.270 ; gain = 435.141
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 46 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 641.910 ; gain = 115.102
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 641.910 ; gain = 434.949
+Synthesis finished with 0 errors, 0 critical warnings and 82 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 642.270 ; gain = 114.551
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 642.270 ; gain = 435.141
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 12 load pin(s).
@@ -555,8 +621,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-72 Infos, 70 Warnings, 0 Critical Warnings and 0 Errors encountered.
+108 Infos, 96 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:33 . Memory (MB): peak = 641.910 ; gain = 417.520
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.103 . Memory (MB): peak = 641.910 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Jan 06 16:48:29 2022...
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 642.270 ; gain = 417.906
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 642.270 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 06 17:31:57 2022...

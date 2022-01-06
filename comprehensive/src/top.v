@@ -100,7 +100,9 @@ module top(
 
         .vga_xpos	(vga_xpos), 
         .vga_ypos	(vga_ypos),
-        .vga_data	(vga_data)
+        .vga_data	(vga_data),
+
+        .i_servo_0  (o_data)
     );
 
     //----------------------------
@@ -138,7 +140,7 @@ module top(
         .vga_vs		(vga_vs),	
         
         .vga_xpos	(vga_xpos),	
-        .vga_ypos	(vga_ypos)	
+        .vga_ypos	(vga_ypos)
     );
 //wire definitions
 endmodule

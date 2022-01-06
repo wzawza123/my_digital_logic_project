@@ -19,8 +19,8 @@ module data_controller (
     localparam state_replay=1;
     //servo
     localparam servo_default=150;
-    localparam servo_step=5;
-    localparam servo_upper_limit=965;
+    localparam servo_step=10;
+    localparam servo_upper_limit=250;
     localparam servo_lower_limit=50;
     //keyboard
     localparam kb_w=0;
